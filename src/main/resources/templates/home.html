@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Vepr</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form  action="/" >
+    <center>
+        <h1>Практическая работа №1: Калькулятор</h1>
+        <p>Введите пример для решения</p>
+        <input  style="text-align:center;" id="strCalc" name="strCalc" type="text" th:value="${strCalcLast}">
+        <p></p>
+        <input formmethod="get" type="submit" value="решение методом Get">
+        <p></p>
+        <input formmethod="post" type="submit" value="решение методом Post">
+        <center><p th:text="'Ответ: ' + ${result}" /></center>
+    </center>
+</form>
+</body>
+</html>
